@@ -603,7 +603,7 @@
 
 _Diverifikasi pada ${tgl} pukul ${jam}_
 https://libertymediapangandaran.github.io/verify/`;
-                                const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(waText)}`;
+                                const waUrl = https://api.whatsapp.com/send?phone=6285211379911&text=${encodeURIComponent(waText)};
                                 window.open(waUrl, '_blank');
                             });
                             waBtn.addEventListener('keydown', function(e) {
