@@ -412,7 +412,7 @@
     </div>
     <!-- Jangan ubah bagian footer ini! -->
     <footer style="margin-top:3.5rem; color:#174ea6a6; font-size:0.85rem; text-align:center; font-weight:600; letter-spacing:0px; padding-bottom:1.2rem;" contenteditable="false">
-        &copy; Made with <span style="color:#f59e42;">❤️</span> by Ziez Studio · 2025
+        &copy;<span style="color:#f59e42;"></span> Liberty Media Pangandaran · 2025
     </footer>
     <div id="popup" style="display:none;" tabindex="-1"></div>
     <script>
