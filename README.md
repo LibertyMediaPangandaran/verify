@@ -602,7 +602,7 @@
 *Lokasi:* ${eventInfo.lokasi}
 
 _Diverifikasi pada ${tgl} pukul ${jam}_
-https://web-verifikasi.com/hanyacontoh/`;
+https://libertymediapangandaran.github.io/verify/`;
                                 const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(waText)}`;
                                 window.open(waUrl, '_blank');
                             });
