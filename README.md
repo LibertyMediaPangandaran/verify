@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -419,7 +418,7 @@
     <script>
         // Data peserta sertifikat lokal
         const certificates = [
-            { nomor: '001/SRT/27E-TE/2025', nama: 'H. Bolot', sebagai: 'Narasumber' },
+    { nomor: '001/SRT/27E-TE/2025', nama: 'H. Bolot', sebagai: 'Narasumber' },
             // tambahkan data lainnya
         ];
         window.certificatesLoaded = true;
