@@ -1,3 +1,4 @@
+
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -6,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0ea5e9; /* sky blue */
-      --secondary: #38bdf8; /* lighter sky blue */
-      --accent: #22c55e; /* green */
+      --primary: #0ea5e9;
+      --secondary: #38bdf8;
+      --accent: #22c55e;
       --bg-white: #ffffff;
       --text-dark: #0f172a;
     }
@@ -17,7 +18,6 @@
       margin: 0; padding: 0;
       height: 100%; width: 100%;
       font-family: 'Lato', Arial, sans-serif;
-      display: flex; flex-direction: column;
       background: var(--bg-white);
     }
 
@@ -31,7 +31,8 @@
     }
 
     .container {
-      flex: 1; display: flex; flex-direction: column;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
       justify-content: center; align-items: center;
       padding: 2rem; text-align: center;
       position: relative; z-index: 1;
@@ -49,17 +50,19 @@
     .desc {
       color: var(--text-dark);
       margin-bottom: 2rem;
+      max-width: 600px;
     }
 
     form {
       display: flex; flex-direction: column; gap: 1rem;
-      width: 90%; max-width: 420px;
+      width: 100%; max-width: 420px;
     }
 
     input[type="text"] {
       padding: 1rem; border: 2px solid var(--primary);
       border-radius: 0.7rem; font-size: 1rem;
       transition: border 0.3s, box-shadow 0.3s;
+      width: 100%;
     }
 
     input[type="text"]:focus {
@@ -85,7 +88,7 @@
       padding: 2rem;
       border-radius: 1rem;
       max-width: 600px;
-      width: 90%;
+      width: 100%;
       display: none;
       text-align: justify;
       box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
@@ -112,9 +115,9 @@
 
     .status-valid {
       font-weight: 700;
-      background: linear-gradient(90deg, var(--accent), var(--primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--accent);
+      font-size: 1.1rem;
+      text-transform: uppercase;
     }
 
     footer {
@@ -128,6 +131,18 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .desc {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
@@ -186,7 +201,7 @@
       if (cert) {
         resultDiv.innerHTML = `
           <div class="cert-text">
-            <p><strong>Status:</strong> <span class="status-valid">✅ ${cert.status}</span></p>
+            <p><strong>Status:</strong> <span class="status-valid">TERVERIFIKASI</span></p>
             <p><strong>Nomor Surat:</strong> ${cert.nomor}</p>
             <p><strong>Penandatangan:</strong> ${cert.penandatangan}</p>
             <p><strong>Jabatan:</strong> ${cert.jabatan}</p>
